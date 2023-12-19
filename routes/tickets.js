@@ -9,6 +9,6 @@ router.get('/tickets/new', ticketsCtrl.new);
 // POST /tickets (create functionality)
 router.post('/tickets', ticketsCtrl.create);
 // POST /flights/:id/tickets (associate a ticket with a flight)
-router.post('/flights/:id/tickets', ticketsCtrl.addToVouchers);
+router.post('/:id', ticketsCtrl.addToVouchers);
 
 module.exports = router;

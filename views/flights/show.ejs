@@ -9,23 +9,20 @@
   <div><%= flight.flightNo %></div>
   <br><div>Departs: </div>
   <div><%= flight.departs %></div>
-  <br><div>Tickets: </div>
+  <br><div>Tickets:</div>
   <div><%= flight.tickets %></div>
 </section>
 
 <!-- new markup below -->
 <br><br><h2>Tickets</h2>
 <form id="add-ticket-to-voucher" method="POST"
-  action="/flights/<%= flight._id %>/tickets/new">
+  action="/tickets/<%= flight._id %>">
   <label>Seat: </label>
   <input name="seat" required pattern="[A-F][1-9]\d?">
   <label>Price: </label>
   <input type="number" min="0">
-  <label>Flight Number:</label>
-  <input type="number" name="flightNo" pattern="\d{10,9999}">
   <input type="submit" value="Add Ticket">
 </form>
-
 
 <!-- new markup below -->
 <br><br><h2>Destinations</h2>
